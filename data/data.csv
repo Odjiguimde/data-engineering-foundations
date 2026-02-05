@@ -1,1 +1,21 @@
+import csv
+
+data = [
+    ["age", "salaire"],
+    [22, 150000],
+    [25, 200000],
+    [30, 350000],
+    [28, 250000]
+]
+
+with open("data.csv", mode="w", newline="", encoding="utf-8") as file:
+    writer = csv.writer(file)
+    writer.writerows(data)
+
+print("Fichier CSV créé avec succès")
+
+#Check content
+
+with open("data.csv", mode="r", encoding="utf-8") as file:
+    print(file.read())
 
